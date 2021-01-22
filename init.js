@@ -9,12 +9,12 @@
   var head = document.getElementsByTagName("head")[0],
     config = {
       "css": [
-        "/css/leaflet.css",
-        "/css/app.css"
+        "css/leaflet.css",
+        "css/app.css"
       ],
       "js": [
-        "/js/chunk-vendors.js",
-        "/js/app.js"
+        "js/chunk-vendors.js",
+        "js/app.js"
       ]
     },
     now = new Date(),
