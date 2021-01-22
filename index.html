@@ -22,23 +22,18 @@
             "CSVPath": "https://developersociety.github.io/plan-map-2/data.csv",
             "geoJSONPath": "https://developersociety.github.io/plan-map-2/geo/uk.json",
             "events": {
-                "markerClick": function(latLng) {
-                    // latLng = { lat: <lat>, lng: <lng>}
-                    console.log("markerClick", '' + latLng.lat + ', ' + latLng.lng);
-                    ga('send', 'event', 'marker', 'click', '' + latLng.lat + ', ' + latLng.lng);
-                },
-                "tagClick": function(tag) {
-                    console.log("tagClick", '' + tag);
-                    ga('send', 'event', 'tag', 'click', '' + tag);
-                },
-                "locationSelect": function(location) {
-                    console.log("locationSelect", '' + location);
-                    ga('send', 'event', 'location', 'click', '' + location);
-                },
-                "storyOpen": function(story) {
-                    console.log("storyOpen", '' + story.name + ', ' + story.location);
-                    ga('send', 'event', 'story', 'click', '' + story.name + ', ' + story.location);
-                }
+              "markerClick": function(latLng) {
+                ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "MarkerClick", eventLabel: '' + latLng.lat + ', ' +latLng.lng});
+              },
+              "tagClick": function(tag) {
+                ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "TagClick", eventLabel: '' + tag});
+              },
+              "locationSelect": function(location) {
+                ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "LocationClick", eventLabel: '' + location});
+              },
+              "storyOpen": function(story) {
+                ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "StoryClick", eventLabel: '' + story.name + ', ' + story.location});
+              }
             }
         };
 
