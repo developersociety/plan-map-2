@@ -3,32 +3,23 @@
   <div id=app csv=data.csv></div>
   <script>
     window.PGRConfig = {
-      "baseUrl": "https://plan-girls-rights.devdemo.org",
-      "CSVPath": "https://plan-girls-rights.devdemo.org/data.csv",
-      "geoJSONPath": "https://plan-girls-rights.devdemo.org/geo/uk.json",
+      "baseUrl": "https://developersociety.github.io/plan-map-2/",
+      "CSVPath": "https://developersociety.github.io/plan-map-2/data.csv",
+      "geoJSONPath": "https://developersociety.github.io/plan-map-2/geo/uk.json",
       "events": {
         "markerClick": function(latLng) {
-          // latLng = { lat: <lat>, lng: <lng>}
-          console.log("markerClick", '' + latLng.lat + ', ' +latLng.lng);
-          //ga('send', 'event', 'marker', 'click', '' + latLng.lat + ', ' +latLng.lng);
-          gtag('event','click',{'event_category':'Map','event_label':'marker-click', '' + latLng.lat + ', ' +latLng.lng});
+          ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "MarkerClick", eventLabel: '' + latLng.lat + ', ' +latLng.lng});
         },
         "tagClick": function(tag) {
-          console.log("tagClick", '' + tag);
-          // ga('send', 'event', 'tag', 'click', '' + tag);
-          gtag('event','click',{'event_category':'Map','event_label':'tag-click', '' + tag});
+          ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "TagClick", eventLabel: '' + tag});
         },
         "locationSelect": function(location) {
-          console.log("locationSelect", '' + location);
-          // ga('send', 'event', 'location', 'click', '' + location);
-          gtag('event','click',{'event_category':'Map','event_label':'location-select', '' + location});
+          ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "LocationClick", eventLabel: '' + location});
         },
         "storyOpen": function(story) {
-          console.log("storyOpen", '' + story.name + ', ' + story.location);
-          // ga('send', 'event', 'story', 'click', '' + story.name + ', ' + story.location);
-          gtag('event','click',{'event_category':'Map','event_label':'story-view', '' + story.name + ', ' + story.location});
+          ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "StoryClick", eventLabel: '' + story.name + ', ' + story.location});
         }
       }
     };
   </script>
-  <script src="https://plan-girls-rights.devdemo.org/init.js"></script>
+  <script src="https://developersociety.github.io/plan-map-2/init.js"></script>
