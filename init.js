@@ -9,12 +9,12 @@
   var head = document.getElementsByTagName("head")[0],
     config = {
       "css": [
-        "https://developersociety.github.io/plan-map-2/css/leaflet.css",
-        "https://developersociety.github.io/plan-map-2/css/app.css"
+        "css/leaflet.css",
+        "css/app.css"
       ],
       "js": [
-        "https://developersociety.github.io/plan-map-2/js/chunk-vendors.js",
-        "https://developersociety.github.io/plan-map-2/js/app.js"
+        "js/chunk-vendors.js",
+        "js/app.js"
       ]
     },
     now = new Date(),

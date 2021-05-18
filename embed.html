@@ -4,8 +4,8 @@
   <script>
     window.PGRConfig = {
       "baseUrl": "https://developersociety.github.io/plan-map-2/",
-      "CSVPath": "https://developersociety.github.io/plan-map-2/data.csv",
-      "geoJSONPath": "https://developersociety.github.io/plan-map-2/geo/uk.json",
+      "CSVPath": "data.csv",
+      "geoJSONPath": "geo/uk.json",
       "events": {
         "markerClick": function(latLng) {
           ga("gtm17.send", {hitType: "event", eventCategory: "Map", eventAction: "MarkerClick", eventLabel: '' + latLng.lat + ', ' +latLng.lng});
@@ -22,4 +22,4 @@
       }
     };
   </script>
-  <script src="https://developersociety.github.io/plan-map-2/init.js"></script>
+  <script src="init.js"></script>
